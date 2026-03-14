@@ -29,8 +29,12 @@ The repo is set up to deploy the built site to GitHub Pages via GitHub Actions.
 
 ### After setup
 
-Push to the `main` branch. The workflow in `.github/workflows/deploy.yml` will build the site and publish the `build` folder to the `gh-pages` branch. The site will be available at:
+Push to the `develop` branch (or run the workflow manually, see below). The workflow will build the site and publish the `build` folder to the `gh-pages` branch. The site will be available at:
 
-- **https://hophanminh.github.io/knowledgebase/**
+### If you see "No runner" or the workflow doesn’t run
 
-(Replace `&lt;username&gt;` with your GitHub username. If you changed `baseUrl` or use a different repo name, the path in the URL matches your `baseUrl` in `docusaurus.config.ts`.)
+- **Run it manually:** In the repo go to **Actions** → select **"Deploy to GitHub Pages"** → **Run workflow** → choose branch **develop** → **Run workflow**. This creates/updates `gh-pages` without a push.
+- **Enable Actions:** **Settings → Actions → General** → ensure "Allow all actions and reusable workflows" (or at least allow this repo’s workflows) is enabled.
+- **Permissions:** Under **Workflow permissions**, choose **Read and write permissions** so the workflow can push to `gh-pages`.
+
+**Site URL:** https://YOUR_USERNAME.github.io/knowledgebase/ (replace YOUR_USERNAME with your GitHub username; if you changed `baseUrl` or repo name, the path matches `baseUrl` in `docusaurus.config.ts`).

@@ -1,8 +1,10 @@
 name: Deploy to GitHub Pages
 
+# Runs automatically on every push to develop; also run manually from Actions tab
 on:
   push:
     branches: [develop]
+  workflow_dispatch:
 
 jobs:
   deploy:
