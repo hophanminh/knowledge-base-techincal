@@ -3,11 +3,11 @@ import type { Config } from '@docusaurus/types';
 const config: Config = {
   title: 'Knowledge Base',
   tagline: 'Documentation and knowledge articles',
-  url: 'https://your-domain.com',
-  baseUrl: '/',
+  url: 'https://hophanminh.github.io',
+  baseUrl: '/knowledge-base-techincal/',
 
-  organizationName: 'your-org',
-  projectName: 'knowledge-base',
+  organizationName: 'hophanminh',
+  projectName: 'knowledge-base-techincal',
 
   presets: [
     [
